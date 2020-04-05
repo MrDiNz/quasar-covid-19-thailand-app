@@ -5,16 +5,16 @@
       <q-toolbar>
         <div class="row justify-center full-width full-height text-center">
           <div class="col-3">
-            Menu1
+            <q-icon name="fas fa-home" size="32px" />
           </div>
           <div class="col-3">
-            menu2
+            <q-icon name="fas fa-chart-line" size="32px" />
           </div>
           <div class="col-3">
-            menu3
+            <q-icon name="fas fa-file-alt" size="32px" />
           </div>
           <div class="col-3">
-            menu3
+            <q-icon name="fas fa-info-circle" size="32px" />
           </div>
         </div>
       </q-toolbar>
@@ -50,9 +50,38 @@
       v-model="leftDrawerOpen"
     >
       <q-list>
-        <q-item-label class="text-grey-8" header>
-          Essential Links
-        </q-item-label>
+        <q-item clickable v-ripple>
+          <q-item-section>
+            <q-icon name="fas fa-home" size="32px" />
+          </q-item-section>
+          <q-item-section>
+            Home
+          </q-item-section>
+        </q-item>
+        <q-item clickable v-ripple>
+          <q-item-section>
+            <q-icon name="fas fa-chart-line" size="32px" />
+          </q-item-section>
+          <q-item-section>
+            Statistic
+          </q-item-section>
+        </q-item>
+        <q-item clickable v-ripple>
+          <q-item-section>
+            <q-icon name="fas fa-file-alt" size="32px" />
+          </q-item-section>
+          <q-item-section>
+            Self Assessment
+          </q-item-section>
+        </q-item>
+        <q-item clickable v-ripple>
+          <q-item-section>
+            <q-icon name="fas fa-info-circle" size="32px" />
+          </q-item-section>
+          <q-item-section>
+            About Developer
+          </q-item-section>
+        </q-item>
       </q-list>
     </q-drawer>
 
