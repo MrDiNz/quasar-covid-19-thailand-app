@@ -1,6 +1,6 @@
 <template>
-  <q-page class="flex flex-center">
-    <img alt="Quasar logo" src="~assets/quasar-logo-full.svg" />
+  <q-page>
+    <p class="text-h5 text-center q-my-sm">COVID-19 Update</p>
   </q-page>
 </template>
 
