@@ -11,9 +11,9 @@
           <q-card-section>
             <div class="row">
               <!--province-->
-              <div class="col-12">จังหวัด: {{ data.Province }}</div>
+              <div class="col-12 text-h6">จังหวัด: {{ data.Province }}</div>
               <!--date and time-->
-              <div class="col-12">
+              <div class="col-12 text-subtitle1">
                 <p>วันที่: {{ data.Date }}</p>
                 <p>เวลา: {{ data.Time }}</p>
               </div>
@@ -69,7 +69,7 @@ export default class Announcement extends Vue {
         this.datas = res.data;
       })
       .catch((err: any) => {
-        console.log(err);
+        // console.log(err);
       })
       .finally(() => {
         this.$q.loading.hide();

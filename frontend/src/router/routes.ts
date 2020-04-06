@@ -17,6 +17,10 @@ const routes: RouteConfig[] = [
       {
         path: '/about',
         component: () => import('src/pages/About.vue')
+      },
+      {
+        path: '/map',
+        component: () => import('src/pages/Map.vue')
       }
     ]
   }

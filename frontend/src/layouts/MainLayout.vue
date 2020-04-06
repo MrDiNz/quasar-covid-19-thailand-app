@@ -1,26 +1,29 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <!--Mobile Nav-->
-    <q-footer style="height: 55px;" elevated v-if="$q.platform.is.mobile">
+    <q-footer elevated style="height: 55px;" v-if="$q.platform.is.mobile">
       <q-toolbar>
-        <div class="row justify-center full-width full-height text-center">
-          <div class="col-3" @click="$router.push('/')">
+        <div class="row  full-width full-height text-center">
+          <div @click="$router.push('/')" class="col">
             <q-icon name="fas fa-home" size="32px" />
           </div>
-          <div class="col-3" @click="$router.push('/announcement')">
+          <div @click="$router.push('/announcement')" class="col">
             <q-icon name="fas fa-bullhorn" size="32px" />
           </div>
-          <div class="col-3" @click="$router.push('/self_assessment')">
+          <div @click="$router.push('/map')" class="col">
+            <q-icon name="fas fa-map-marked-alt" size="32px" />
+          </div>
+          <div @click="$router.push('/self_assessment')" class="col">
             <q-icon name="fas fa-file-alt" size="32px" />
           </div>
-          <div class="col-3" @click="$router.push('/about')">
+          <div @click="$router.push('/about')" class="col">
             <q-icon name="fas fa-info-circle" size="32px" />
           </div>
         </div>
       </q-toolbar>
     </q-footer>
     <!--PC Nav-->
-    <q-header elevated v-else>
+    <q-header elevated v-if="!$q.platform.is.mobile">
       <q-toolbar>
         <div class="row justify-between full-width full-height">
           <div class="col-1">
@@ -47,10 +50,11 @@
       bordered
       content-class="bg-grey-1"
       show-if-above
+      v-if="!$q.platform.is.mobile"
       v-model="leftDrawerOpen"
     >
       <q-list>
-        <q-item clickable v-ripple @click="$router.push('/')">
+        <q-item @click="$router.push('/')" clickable v-ripple>
           <q-item-section>
             <q-icon name="fas fa-home" size="32px" />
           </q-item-section>
@@ -58,7 +62,7 @@
             หน้าหลัก
           </q-item-section>
         </q-item>
-        <q-item clickable v-ripple @click="$router.push('/announcement')">
+        <q-item @click="$router.push('/announcement')" clickable v-ripple>
           <q-item-section>
             <q-icon name="fas fa-bullhorn" size="32px" />
           </q-item-section>
@@ -66,7 +70,15 @@
             แจ้งเตือน
           </q-item-section>
         </q-item>
-        <q-item clickable v-ripple @click="$router.push('/self_assessment')">
+        <q-item @click="$router.push('/map')" clickable v-ripple>
+          <q-item-section>
+            <q-icon name="fas fa-map-marked-alt" size="32px" />
+          </q-item-section>
+          <q-item-section>
+            แผนที่
+          </q-item-section>
+        </q-item>
+        <q-item @click="$router.push('/self_assessment')" clickable v-ripple>
           <q-item-section>
             <q-icon name="fas fa-file-alt" size="32px" />
           </q-item-section>
@@ -74,7 +86,7 @@
             ทำแบบทดสอบ
           </q-item-section>
         </q-item>
-        <q-item clickable v-ripple @click="$router.push('/about')">
+        <q-item @click="$router.push('/about')" clickable v-ripple>
           <q-item-section>
             <q-icon name="fas fa-info-circle" size="32px" />
           </q-item-section>
