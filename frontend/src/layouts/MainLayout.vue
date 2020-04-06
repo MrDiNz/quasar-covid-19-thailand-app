@@ -1,19 +1,19 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <!--Mobile Nav-->
-    <q-footer elevated v-if="$q.platform.is.mobile">
+    <q-footer style="height: 55px;" elevated v-if="$q.platform.is.mobile">
       <q-toolbar>
         <div class="row justify-center full-width full-height text-center">
-          <div class="col-3">
+          <div class="col-3" @click="$router.push('/')">
             <q-icon name="fas fa-home" size="32px" />
           </div>
-          <div class="col-3">
-            <q-icon name="fas fa-chart-line" size="32px" />
+          <div class="col-3" @click="$router.push('/announcement')">
+            <q-icon name="fas fa-bullhorn" size="32px" />
           </div>
-          <div class="col-3">
+          <div class="col-3" @click="$router.push('/self_assessment')">
             <q-icon name="fas fa-file-alt" size="32px" />
           </div>
-          <div class="col-3">
+          <div class="col-3" @click="$router.push('/about')">
             <q-icon name="fas fa-info-circle" size="32px" />
           </div>
         </div>
@@ -50,36 +50,36 @@
       v-model="leftDrawerOpen"
     >
       <q-list>
-        <q-item clickable v-ripple>
+        <q-item clickable v-ripple @click="$router.push('/')">
           <q-item-section>
             <q-icon name="fas fa-home" size="32px" />
           </q-item-section>
           <q-item-section>
-            Home
+            หน้าหลัก
           </q-item-section>
         </q-item>
-        <q-item clickable v-ripple>
+        <q-item clickable v-ripple @click="$router.push('/announcement')">
           <q-item-section>
-            <q-icon name="fas fa-chart-line" size="32px" />
+            <q-icon name="fas fa-bullhorn" size="32px" />
           </q-item-section>
           <q-item-section>
-            Statistic
+            แจ้งเตือน
           </q-item-section>
         </q-item>
-        <q-item clickable v-ripple>
+        <q-item clickable v-ripple @click="$router.push('/self_assessment')">
           <q-item-section>
             <q-icon name="fas fa-file-alt" size="32px" />
           </q-item-section>
           <q-item-section>
-            Self Assessment
+            ทำแบบทดสอบ
           </q-item-section>
         </q-item>
-        <q-item clickable v-ripple>
+        <q-item clickable v-ripple @click="$router.push('/about')">
           <q-item-section>
             <q-icon name="fas fa-info-circle" size="32px" />
           </q-item-section>
           <q-item-section>
-            About Developer
+            ติดต่อผู้พัฒนา
           </q-item-section>
         </q-item>
       </q-list>

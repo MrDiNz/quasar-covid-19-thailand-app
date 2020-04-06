@@ -2,7 +2,7 @@
   <q-page>
     <q-card class="q-ma-sm">
       <q-card-section>
-        <p class="text-h4 text-center ">COVID-19 Status</p>
+        <p class="text-h5 text-center ">สถานะผู้ติดเชื้อ COVID-19</p>
       </q-card-section>
     </q-card>
     <q-card class="q-ma-sm" style="border-radius: 8px">
@@ -57,6 +57,9 @@
     </q-card>
     <div class="q-ma-sm">
       <p class="text-subtitle1">Last update: {{ getDate(data.UpdateDate) }}</p>
+    </div>
+    <div>
+      กราฟสถิติ จะตามมาในเร็วๆนี้...
     </div>
   </q-page>
 </template>
